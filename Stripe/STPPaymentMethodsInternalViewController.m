@@ -38,8 +38,6 @@ static NSInteger const PaymentMethodSectionAddCard = 1;
 @property (nonatomic, strong, nullable, readwrite) id<STPBackendAPIAdapter> apiAdapter;
 @property (nonatomic, strong, nullable, readwrite) STPUserInformation *prefilledInformation;
 @property (nonatomic, strong, nullable, readwrite) STPAddress *shippingAddress;
-@property (nonatomic, strong, readwrite) NSArray<id<STPPaymentMethod>> *paymentMethods;
-@property (nonatomic, strong, nullable, readwrite) id<STPPaymentMethod> selectedPaymentMethod;
 @property (nonatomic, weak, nullable, readwrite) id<STPPaymentMethodsInternalViewControllerDelegate> delegate;
 
 @property (nonatomic, strong, readwrite) UIImageView *cardImageView;

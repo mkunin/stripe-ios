@@ -35,13 +35,13 @@
 
 @interface STPPaymentMethodsViewController()<STPPaymentMethodsInternalViewControllerDelegate, STPAddCardViewControllerDelegate>
 
-@property (nonatomic) STPPaymentConfiguration *configuration;
+@property (nonatomic, readwrite) STPPaymentConfiguration *configuration;
 @property (nonatomic) STPAddress *shippingAddress;
-@property (nonatomic) id<STPBackendAPIAdapter> apiAdapter;
+@property (nonatomic, readwrite) id<STPBackendAPIAdapter> apiAdapter;
 @property (nonatomic) STPAPIClient *apiClient;
 @property (nonatomic) STPPromise<STPPaymentMethodTuple *> *loadingPromise;
 @property (nonatomic, weak) STPPaymentActivityIndicatorView *activityIndicator;
-@property (nonatomic, weak) UIViewController *internalViewController;
+@property (nonatomic, readwrite, weak) UIViewController *internalViewController;
 @property (nonatomic) BOOL loading;
 
 @end

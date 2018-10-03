@@ -125,6 +125,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, strong) UIView *addCardViewControllerFooterView;
 
+// Finishing with a payment method.
+- (void)finishWithPaymentMethod:(id<STPPaymentMethod>)paymentMethod;
+
 /**
  If you're pushing `STPPaymentMethodsViewController` onto an existing 
  `UINavigationController`'s stack, you should use this method to dismiss it, 

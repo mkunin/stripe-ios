@@ -33,6 +33,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @interface STPPaymentMethodsViewController : STPCoreViewController
 
+@property (nonatomic) id<STPBackendAPIAdapter> apiAdapter;
+@property (nonatomic, weak) UIViewController *internalViewController;
+@property (nonatomic) STPPaymentConfiguration *configuration;
+
 /**
  The delegate for the view controller.
  

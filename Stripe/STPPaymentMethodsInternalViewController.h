@@ -26,6 +26,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface STPPaymentMethodsInternalViewController : STPCoreTableViewController
 
+@property (nonatomic, strong, readwrite) NSArray<id<STPPaymentMethod>> *paymentMethods;
+@property (nonatomic, strong, nullable, readwrite) id<STPPaymentMethod> selectedPaymentMethod;
+
 - (instancetype)initWithConfiguration:(STPPaymentConfiguration *)configuration
                       customerContext:(nullable STPCustomerContext *)customerContext
                                 theme:(STPTheme *)theme

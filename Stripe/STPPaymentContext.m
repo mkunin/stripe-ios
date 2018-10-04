@@ -25,19 +25,6 @@
 #import "UIViewController+Stripe_ParentViewController.h"
 #import "UIViewController+Stripe_Promises.h"
 
-/**
- The current state of the payment context
-
- - STPPaymentContextStateNone: No view controllers are currently being shown. The payment may or may not have already been completed
- - STPPaymentContextStateShowingRequestedViewController: The view controller that you requested the context show is being shown (via the push or present payment methods or shipping view controller methods)
- - STPPaymentContextStateRequestingPayment: The payment context is in the middle of requesting payment. It may be showing some other UI or view controller if more information is necessary to complete the payment.
- */
-typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
-    STPPaymentContextStateNone,
-    STPPaymentContextStateShowingRequestedViewController,
-    STPPaymentContextStateRequestingPayment,
-};
-
 @interface STPPaymentContext()<STPPaymentMethodsViewControllerDelegate, STPShippingAddressViewControllerDelegate>
 
 @property (nonatomic) STPPaymentConfiguration *configuration;
@@ -48,16 +35,12 @@ typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
 
 // these wrap hostViewController's promises because the hostVC is nil at init-time
 @property (nonatomic) STPVoidPromise *willAppearPromise;
-@property (nonatomic) STPVoidPromise *didAppearPromise;
 
-@property (nonatomic, weak) STPPaymentMethodsViewController *paymentMethodsViewController;
 @property (nonatomic) id<STPPaymentMethod> selectedPaymentMethod;
 @property (nonatomic) NSArray<id<STPPaymentMethod>> *paymentMethods;
 @property (nonatomic) STPAddress *shippingAddress;
 @property (nonatomic) PKShippingMethod *selectedShippingMethod;
 @property (nonatomic) NSArray<PKShippingMethod *> *shippingMethods;
-
-@property (nonatomic, assign) STPPaymentContextState state;
 
 @property (nonatomic) STPPaymentContextAmountModel *paymentAmountModel;
 @property (nonatomic) BOOL shippingAddressNeedsVerification;

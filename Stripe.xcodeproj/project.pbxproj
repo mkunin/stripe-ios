@@ -23,6 +23,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		0156325F2165933900814A0F /* STPWeakStrongMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F132DFE21D51372A002FF5B7 /* STPWeakStrongMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0426B96E1CEADC98006AC8DD /* STPColorUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = 0426B96C1CEADC98006AC8DD /* STPColorUtils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0426B96F1CEADC98006AC8DD /* STPColorUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 0426B96D1CEADC98006AC8DD /* STPColorUtils.m */; };
 		0426B9721CEAE3EB006AC8DD /* UITableViewCell+Stripe_Borders.h in Headers */ = {isa = PBXBuildFile; fileRef = 0426B9701CEAE3EB006AC8DD /* UITableViewCell+Stripe_Borders.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -2337,6 +2338,7 @@
 				04633B0C1CD44F6C009D4FB5 /* PKPayment+Stripe.h in Headers */,
 				04B31DFF1D131D9000EF1631 /* STPPaymentCardTextFieldCell.h in Headers */,
 				C1A06F101E1D8A7F004DCA06 /* STPCard+Private.h in Headers */,
+				0156325F2165933900814A0F /* STPWeakStrongMacros.h in Headers */,
 				F1D3A24C1EB012010095BFA9 /* STPMultipartFormDataEncoder.h in Headers */,
 				C113D2191EBB9A36006FACC2 /* STPEphemeralKey.h in Headers */,
 				04E39F6A1CED48D500AF3B96 /* UIBarButtonItem+Stripe.h in Headers */,

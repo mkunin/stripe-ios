@@ -126,6 +126,28 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic, weak, nullable) UIViewController *hostViewController;
 
+// The payment methods view controller.
+@property (nonatomic, readwrite, weak) STPPaymentMethodsViewController *paymentMethodsViewController;
+
+// Context state.
+@property (nonatomic, assign) STPPaymentContextState state;
+
+/**
+ The current state of the payment context
+ 
+ - STPPaymentContextStateNone: No view controllers are currently being shown. The payment may or may not have already been completed
+ - STPPaymentContextStateShowingRequestedViewController: The view controller that you requested the context show is being shown (via the push or present payment methods or shipping view controller methods)
+ - STPPaymentContextStateRequestingPayment: The payment context is in the middle of requesting payment. It may be showing some other UI or view controller if more information is necessary to complete the payment.
+ */
+typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
+    STPPaymentContextStateNone,
+    STPPaymentContextStateShowingRequestedViewController,
+    STPPaymentContextStateRequestingPayment,
+};
+
+// didAppearPromise
+@property (nonatomic) STPVoidPromise *didAppearPromise;
+
 /**
  This delegate will be notified when the payment context's contents change. @see STPPaymentContextDelegate
  */

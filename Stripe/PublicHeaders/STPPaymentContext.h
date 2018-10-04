@@ -16,6 +16,8 @@
 #import "STPPaymentMethod.h"
 #import "STPPaymentResult.h"
 #import "STPUserInformation.h"
+#import "STPPromise.h"
+#import "STPPaymentMethodsViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -129,9 +131,6 @@ NS_ASSUME_NONNULL_BEGIN
 // The payment methods view controller.
 @property (nonatomic, readwrite, weak) STPPaymentMethodsViewController *paymentMethodsViewController;
 
-// Context state.
-@property (nonatomic, assign) STPPaymentContextState state;
-
 /**
  The current state of the payment context
  
@@ -144,6 +143,9 @@ typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
     STPPaymentContextStateShowingRequestedViewController,
     STPPaymentContextStateRequestingPayment,
 };
+
+// Context state.
+@property (nonatomic, assign) STPPaymentContextState state;
 
 // didAppearPromise
 @property (nonatomic) STPVoidPromise *didAppearPromise;

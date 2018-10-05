@@ -37,6 +37,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, weak) UIViewController *internalViewController;
 @property (nonatomic, readonly) STPPaymentConfiguration *configuration;
 
+- (void)internalViewControllerDidCreateSource:(id<STPSourceProtocol>)source completion:(STPErrorBlock)completion;
+
 /**
  The delegate for the view controller.
  

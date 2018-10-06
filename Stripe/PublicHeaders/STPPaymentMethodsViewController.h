@@ -13,6 +13,8 @@
 #import "STPPaymentConfiguration.h"
 #import "STPPaymentMethod.h"
 #import "STPUserInformation.h"
+#import "STPPromise.h"
+#import "STPPaymentMethodTuple.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -36,6 +38,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) id<STPBackendAPIAdapter> apiAdapter;
 @property (nonatomic, readonly, weak) UIViewController *internalViewController;
 @property (nonatomic, readonly) STPPaymentConfiguration *configuration;
+
+- (STPPromise<STPPaymentMethodTuple *>*)retrieveCustomerWithConfiguration:(STPPaymentConfiguration *)configuration
+                                                               apiAdapter:(id<STPBackendAPIAdapter>)apiAdapter;
 
 - (void)internalViewControllerDidCreateSource:(id<STPSourceProtocol>)source completion:(STPErrorBlock)completion;
 

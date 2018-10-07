@@ -301,6 +301,9 @@ typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
  */
 - (void)retryLoading;
 
+// Set payment methods.
+- (void)setPaymentMethods:(NSArray<id<STPPaymentMethod>> *)paymentMethods;
+
 /**
  This creates, configures, and appropriately presents an `STPPaymentMethodsViewController` 
  on top of the payment context's `hostViewController`. It'll be dismissed automatically 

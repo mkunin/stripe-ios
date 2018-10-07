@@ -37,7 +37,6 @@
 @property (nonatomic) STPVoidPromise *willAppearPromise;
 
 @property (nonatomic) id<STPPaymentMethod> selectedPaymentMethod;
-@property (nonatomic) NSArray<id<STPPaymentMethod>> *paymentMethods;
 @property (nonatomic) STPAddress *shippingAddress;
 @property (nonatomic) PKShippingMethod *selectedShippingMethod;
 @property (nonatomic) NSArray<PKShippingMethod *> *shippingMethods;

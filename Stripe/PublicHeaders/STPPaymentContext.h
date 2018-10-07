@@ -168,7 +168,7 @@ typedef NS_ENUM(NSUInteger, STPPaymentContextState) {
 /**
  The available payment methods the user can choose between. May be nil.
  */
-@property (nonatomic, readonly, nullable) NSArray<id<STPPaymentMethod>> *paymentMethods;
+@property (nonatomic, readwrite, nullable) NSArray<id<STPPaymentMethod>> *paymentMethods;
 
 /**
  The user's currently selected shipping method. May be nil.

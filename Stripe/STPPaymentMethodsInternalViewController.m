@@ -173,11 +173,6 @@ static NSInteger const PaymentMethodSectionAddCard = 1;
 }
 
 - (void)updateWithPaymentMethodTuple:(STPPaymentMethodTuple *)tuple {
-    if ([self.paymentMethods isEqualToArray:tuple.paymentMethods] &&
-        [self.selectedPaymentMethod isEqual:tuple.selectedPaymentMethod]) {
-        return;
-    }
-
     self.paymentMethods = tuple.paymentMethods;
     self.selectedPaymentMethod = tuple.selectedPaymentMethod;
 
